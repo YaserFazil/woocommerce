@@ -1,0 +1,4 @@
+Significance: minor
+Type: tweak
+
+Tweaks the method we use to get the current query string, to ensure browser history works when you navigate to the marketplace.
