@@ -1,8 +1,46 @@
 .woocommerce-marketplace__header {
+	align-items: center;
 	background: white;
+	display: grid;
+	grid-template: "mktpl-title mktpl-title mktpl-account" 60px "mktpl-tabs mktpl-search mktpl-search" 48px / 1fr 352px 36px;
 	left: 0;
 	padding: 0 40px;
 	position: absolute;
 	top: -60px;
 	width: 100%;
+}
+
+.woocommerce-marketplace__header-title {
+	font-size: 14px;
+	font-weight: 700;
+	grid-area: mktpl-title;
+	line-height: 18px;
+}
+
+.woocommerce-marketplace__header-title__icon {
+	margin-right: 8px;
+}
+
+.woocommerce-marketplace__header-account {
+	grid-area: mktpl-account;
+}
+
+.woocommerce-marketplace__header-tabs {
+	grid-area: mktpl-tabs;
+}
+
+.woocommerce-marketplace__header-search {
+	display: flex;
+	grid-area: mktpl-search;
+	border-radius: 2px;
+	background: var(--gutenberg-gray-100, #F0F0F0);
+}
+
+.woocommerce-marketplace__header-search-field {
+	all: reset;
+	flex-grow: 1;
+}
+
+.woocommerce-marketplace__header-search-button {
+	all: reset;
 }
