@@ -36,6 +36,10 @@ const tabs: Tabs = {
 		name: 'extensions',
 		title: __( 'Extensions', 'woocommerce' ),
 	},
+	themes: {
+		name: 'themes',
+		title: __( 'Themes', 'woocommerce' ),
+	},
 };
 
 const setUrlTabParam = ( tabKey: string ) => {

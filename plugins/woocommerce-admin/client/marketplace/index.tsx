@@ -8,7 +8,7 @@ import { useState } from '@wordpress/element';
  */
 import './marketplace.scss';
 import { DEFAULT_TAB_KEY } from './components/constants';
-import Tabs from './components/tabs/tabs';
+import Header from './components/header/header';
 import Content from './components/content/content';
 
 export default function Marketplace() {
@@ -16,7 +16,7 @@ export default function Marketplace() {
 
 	return (
 		<>
-			<Tabs
+			<Header
 				selectedTab={ selectedTab }
 				setSelectedTab={ setSelectedTab }
 			/>
