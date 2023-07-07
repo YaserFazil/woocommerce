@@ -2,7 +2,8 @@
 	align-items: center;
 	background: white;
 	display: grid;
-	grid-template: "mktpl-title mktpl-title mktpl-account" 60px "mktpl-tabs mktpl-search mktpl-search" 48px / auto auto 36px;
+	grid-template: "mktpl-title mktpl-title mktpl-account" 60px
+	               "mktpl-tabs mktpl-search mktpl-search" 48px / auto auto 36px;
 	left: 0;
 	padding: 0 40px;
 	position: absolute;
@@ -52,3 +53,4 @@
 	all: unset;
 	cursor: pointer;
 }
+
