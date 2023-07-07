@@ -16,6 +16,7 @@ import { DEFAULT_TAB_KEY, MARKETPLACE_PATH } from '../constants';
 export interface TabsProps {
 	selectedTab?: string | undefined;
 	setSelectedTab: ( value: string ) => void;
+	additionalClassNames?: Array<string> | undefined;
 }
 
 interface Tab {
@@ -77,7 +78,7 @@ const renderTabs = ( props: TabsProps ) => {
 };
 
 const Tabs = ( props: TabsProps ): JSX.Element => {
-	const { setSelectedTab } = props;
+	const { setSelectedTab, additionalClassNames } = props;
 
 	interface Query {
 		path?: string;
@@ -96,7 +97,7 @@ const Tabs = ( props: TabsProps ): JSX.Element => {
 	}, [ setSelectedTab ] );
 
 	return (
-		<nav className="woocommerce-marketplace__tabs">
+		<nav className={ classNames( 'woocommerce-marketplace__tabs', additionalClassNames || [] ) }>
 			{ renderTabs( props ) }
 		</nav>
 	);

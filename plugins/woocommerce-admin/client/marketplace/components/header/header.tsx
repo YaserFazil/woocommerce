@@ -22,12 +22,11 @@ export default function Header( props: HeaderProps ) {
 		<header className="woocommerce-marketplace__header">
 			<HeaderTitle />
 			<HeaderAccount />
-			<nav className="woocommerce-marketplace__header-tabs">
-				<Tabs
-					selectedTab={ selectedTab }
-					setSelectedTab={ setSelectedTab }
-				/>
-			</nav>
+			<Tabs
+				additionalClassNames={ [ 'woocommerce-marketplace__header-tabs' ] }
+				selectedTab={ selectedTab }
+				setSelectedTab={ setSelectedTab }
+			/>
 			<HeaderSearch />
 		</header>
 	);
