@@ -2,7 +2,7 @@
 	align-items: center;
 	background: white;
 	display: grid;
-	grid-template: "mktpl-title mktpl-title mktpl-account" 60px "mktpl-tabs mktpl-search mktpl-search" 48px / 1fr 352px 36px;
+	grid-template: "mktpl-title mktpl-title mktpl-account" 60px "mktpl-tabs mktpl-search mktpl-search" 48px / auto auto 36px;
 	left: 0;
 	padding: 0 40px;
 	position: absolute;
@@ -23,6 +23,7 @@
 
 .woocommerce-marketplace__header-account {
 	grid-area: mktpl-account;
+	justify-self: center;
 }
 
 .woocommerce-marketplace__header-tabs {
@@ -30,17 +31,18 @@
 }
 
 .woocommerce-marketplace__header-search {
+	background: var(--gutenberg-gray-100, #F0F0F0);
+	border-radius: 2px;
 	display: flex;
 	grid-area: mktpl-search;
-	border-radius: 2px;
-	background: var(--gutenberg-gray-100, #F0F0F0);
-}
+	height: 40px;
 
-.woocommerce-marketplace__header-search-field {
-	all: reset;
-	flex-grow: 1;
+	input[type="search"] {
+		all: unset;
+		flex-grow: 1;
+	}
 }
 
 .woocommerce-marketplace__header-search-button {
-	all: reset;
+	all: unset;
 }
