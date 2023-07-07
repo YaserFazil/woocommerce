@@ -9,6 +9,13 @@
 	position: absolute;
 	top: -60px;
 	width: 100%;
+
+	/* On narrow screens, "stack" header items */
+	@media (width <= 782px) {
+		grid-template: "mktpl-title mktpl-account" 60px
+		               "mktpl-search mktpl-search" 48px
+		               "mktpl-tabs mktpl-tabs" 48px / auto 36px;
+	}
 }
 
 .woocommerce-marketplace__header-title {
