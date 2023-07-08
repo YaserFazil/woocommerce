@@ -33,7 +33,17 @@ import EditorHistoryRedo from './editor-history-redo';
 import EditorHistoryUndo from './editor-history-undo';
 import { DocumentOverview } from './document-overview';
 
-export function HeaderToolbar() {
+type HeaderToolbarProps = {
+	isModalActionsBarVisible?: boolean;
+	onSave?: () => void;
+	onCancel?: () => void;
+};
+
+export function HeaderToolbar( {
+	isModalActionsBarVisible = false,
+	onSave = () => {},
+	onCancel = () => {},
+}: HeaderToolbarProps ) {
 	const { isInserterOpened, setIsInserterOpened } =
 		useContext( EditorContext );
 	const isWideViewport = useViewportMatch( 'wide' );
@@ -119,6 +129,26 @@ export function HeaderToolbar() {
 					</>
 				) }
 			</div>
+			{ isModalActionsBarVisible && (
+				<div className="woocommerce-iframe-editor__header-toolbar-right">
+					<div className="woocommerce-modal-actions">
+						<Button
+							variant="tertiary"
+							className="woocommerce-modal-actions__cancel-button"
+							onClick={ onCancel }
+						>
+							{ __( 'Cancel', 'woocommerce' ) }
+						</Button>
+						<Button
+							variant="primary"
+							className="woocommerce-modal-actions__done-button"
+							onClick={ onSave }
+						>
+							{ __( 'Done', 'woocommerce' ) }
+						</Button>
+					</div>
+				</div>
+			) }
 		</NavigableToolbar>
 	);
 }

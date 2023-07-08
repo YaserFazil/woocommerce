@@ -26,7 +26,15 @@
         }
     }
 
+	.woocommerce-iframe-editor__header-toolbar-right {
+		margin-left: auto;
+		margin-right: $gap-small;
+		button {
+			margin-left: $gap-small;
+		}
+	}
+
     &-left {
         padding-left: $gap-small;
-    }    
+    }
 }
